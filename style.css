@@ -1,0 +1,105 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #8fd3f4, #84fab0);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  header h1 {
+    font-size: 36px;
+    color: #8b5c00;
+  }
+  
+  header p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  /* Main section */
+  .game-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0;
+  }
+  
+  .game-image img {
+    max-width: 100%;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .game-image img:hover {
+    transform: scale(1.05);
+  }
+  
+  .game-info {
+    max-width: 400px;
+  }
+  
+  .game-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .play-button {
+    display: inline-block;
+    background-color: #e63946;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+  }
+  
+  .play-button:hover {
+    background-color: #d62828;
+  }
+  
+  /* contatos */
+  .contato {
+    background-color: #ffffffcc;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .contato h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .contato p {
+    margin-bottom: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #555;
+    margin-top: 40px;
+  }
+  
