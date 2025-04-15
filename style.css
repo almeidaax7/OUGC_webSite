@@ -82,62 +82,64 @@
   
   /* contatos */
   .contato {
-    background-color: #ffffffcc;
-    padding: 30px 20px; /* Menos padding */
-    margin-top: 60px;
-    border-radius: 10px;
-    text-align: center;
-  }
-  
-  .contato h2 {
-    font-size: 20px; /* Fonte do título menor */
-    margin-bottom: 15px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px; /* Menos espaçamento entre os campos */
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-group label {
-    font-size: 14px; /* Fonte menor para o label */
-    margin-bottom: 5px;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 8px; /* Menos padding nos campos */
-    font-size: 14px; /* Fonte menor nos campos */
-    border: 1px solid #ccc;
-    border-radius: 6px; /* Bordas um pouco menores */
-    box-sizing: border-box;
-  }
-  
-  .form-group textarea {
-    resize: vertical;
-    height: 100px; /* Menor altura para o campo de mensagem */
-  }
-  
-  .submit-btn {
-    background-color: #e63946;
-    color: white;
-    padding: 10px 20px; /* Menos padding no botão */
-    font-size: 14px; /* Fonte menor no botão */
-    border: none;
-    border-radius: 6px; /* Bordas menores no botão */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-btn:hover {
-    background-color: #d62828;
-  }
-  
-  
-  
+  background-color: #f0f0f0; /* Fundo cinza claro */
+  padding: 30px 20px;
+  margin-top: 60px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold; /* Título mais forte */
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: bold; /* Texto do label mais forte */
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-weight: bold; /* Texto dos campos mais forte */
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.submit-btn {
+  background-color: #e63946;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold; /* Texto do botão mais forte */
+}
+
+.submit-btn:hover {
+  background-color: #d62828;
+}
+
   /* Footer */
   footer {
     background-color: #111; /* Preto fosco */
@@ -237,5 +239,27 @@
   .galeria-imagens img:hover {
     transform: scale(1.05);
   }
+
+  .success-message {
+    background-color: #4CAF50; /* Cor verde para indicar sucesso */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    animation: fadeOut 5s forwards; /* Animação de fade out após 5 segundos */
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
   
   

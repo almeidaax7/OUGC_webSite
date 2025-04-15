@@ -46,9 +46,10 @@
 
   <!-- contatos -->
   <!-- Contato -->
+<!-- Contato -->
 <section class="contato" id="contato">
-    <h2>Entre em Contato</h2>
-    <form action="#" method="POST">
+    <h2>Contato</h2>
+    <form id="form-contato" action="#" method="POST">
       <div class="form-group">
         <label for="nome">Digite seu nome</label>
         <input type="text" id="nome" name="nome" required>
@@ -65,6 +66,7 @@
     </form>
   </section>
   
+  
   <!-- Galeria -->
 <section class="galeria" id="galeria">
     <h2>Galeria</h2>
@@ -75,8 +77,6 @@
     </div>
   </section>
   
-
-  <!-- Footer -->
   <!-- Footer -->
 <footer>
     <p>© 2025 O Último Guardião do Cogumelo. Todos os direitos reservados.</p>
@@ -84,5 +84,42 @@
     <p><strong>Instagram:</strong> <a href="https://www.instagram.com/almeidaax7/" target="_blank">@almeidaax7</a></p>
   </footer>
   
+  <script>
+    // Validação do formulário de contato
+    document.getElementById("form-contato").addEventListener("submit", function(event) {
+      // Previne o envio do formulário
+      event.preventDefault();
+  
+      // Obtenha os valores dos campos
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const mensagem = document.getElementById("mensagem").value;
+  
+      // Verifique se os campos estão vazios
+      if (!nome || !email || !mensagem) {
+        alert("Por favor, preencha todos os campos!");
+        return; // Não envia o formulário
+      }
+  
+      // Se tudo estiver ok, exibe a mensagem de sucesso
+      const successMessage = document.createElement("div");
+      successMessage.textContent = "Mensagem enviada com sucesso!";
+      successMessage.classList.add("success-message");
+      
+      // Coloca a mensagem em cima do botão "Enviar"
+      const form = document.getElementById("form-contato");
+      form.appendChild(successMessage);
+  
+      // Após 5 segundos, remove a mensagem
+      setTimeout(function() {
+        successMessage.remove();
+      }, 5000); // 5000ms = 5 segundos
+  
+      // Aqui você pode adicionar a lógica de envio real (como AJAX, etc.)
+      document.getElementById("form-contato").reset(); // Limpa os campos
+    });
+  </script>
+  
+
 </body>
 </html>
