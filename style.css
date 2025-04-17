@@ -346,6 +346,10 @@
     }
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+  
   
   
   

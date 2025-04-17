@@ -5,32 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>O Último Guardião do Cogumelo</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="images/b7b2fef4-88d7-4c53-b21c-89350eece62c.png" rel="shortcut icon">
 </head>
 <body>
 
   <!-- Header -->
-  <!-- Header com navegação -->
-<header>
+  <header id="inicio">
     <nav class="navbar">
       <h1>O Último Guardião do Cogumelo</h1>
       <ul class="nav-menu">
         <li><a href="#inicio">Início</a></li>
         <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#Contato">Contato</a></li>
+        <li><a href="#contato">Contato</a></li>
         <li><a href="#galeria">Galeria</a></li>
         <li><a href="Jogo/index.html">Jogar</a></li>
       </ul>
     </nav>
     <p>Uma jornada pixelada pela proteção do último cogumelo mágico!</p>
   </header>
-  
 
   <!-- menu -->
   <main>
-    <section class="game-container">
+    <section class="game-container" id="sobre">
       <!-- imagem do jogo -->
       <div class="game-image">
-        <img src="images/b7b2fef4-88d7-4c53-b21c-89350eece62c.png">
+        <img src="images/b7b2fef4-88d7-4c53-b21c-89350eece62c.png" alt="Logo do jogo">
       </div>
 
       <!-- informaçoes sobre o jogo -->
@@ -44,8 +43,8 @@
     </section>
   </main>
 
-<!-- Contato -->
-<section class="contato" id="contato">
+  <!-- Contato -->
+  <section class="contato" id="contato">
     <h2>Contato</h2>
     <form id="form-contato" action="#" method="POST">
       <div class="form-group">
@@ -63,10 +62,9 @@
       <button type="submit" class="submit-btn">Enviar</button>
     </form>
   </section>
-  
-  
+
   <!-- Galeria -->
-<section class="galeria" id="galeria">
+  <section class="galeria" id="galeria">
     <h2>Galeria</h2>
     <div class="galeria-imagens">
       <img src="images/Captura de tela1 2025-04-16 215915.png" alt="Cena do jogo 1">
@@ -74,50 +72,42 @@
       <img src="images/Captura de tela3 2025-04-16 220428.png" alt="Cena do jogo 3">
     </div>
   </section>
-  
+
   <!-- Footer -->
-<footer>
+  <footer>
     <p>© 2025 O Último Guardião do Cogumelo. Todos os direitos reservados.</p>
     <p><strong>Email:</strong> <a href="mailto:xitemembelem@gmail.com">xitemembelem@gmail.com</a></p>
     <p><strong>Instagram:</strong> <a href="https://www.instagram.com/almeidaax7/" target="_blank">@almeidaax7</a></p>
   </footer>
-  
+
+  <!-- JS do formulário -->
   <script>
-    // Validação do formulário de contato
     document.getElementById("form-contato").addEventListener("submit", function(event) {
-      // Previne o envio do formulário
       event.preventDefault();
-  
-      // Obtenha os valores dos campos
+
       const nome = document.getElementById("nome").value;
       const email = document.getElementById("email").value;
       const mensagem = document.getElementById("mensagem").value;
-  
-      // Verifique se os campos estão vazios
+
       if (!nome || !email || !mensagem) {
         alert("Por favor, preencha todos os campos!");
-        return; // Não envia o formulário
+        return;
       }
-  
-      // Se tudo estiver ok, exibe a mensagem de sucesso
+
       const successMessage = document.createElement("div");
       successMessage.textContent = "Mensagem enviada com sucesso!";
       successMessage.classList.add("success-message");
-      
-      // Coloca a mensagem em cima do botão "Enviar"
+
       const form = document.getElementById("form-contato");
       form.appendChild(successMessage);
-  
-      // Após 5 segundos, remove a mensagem
+
       setTimeout(function() {
         successMessage.remove();
-      }, 5000); // 5000ms = 5 segundos
-  
-      // Aqui você pode adicionar a lógica de envio real (como AJAX, etc.)
-      document.getElementById("form-contato").reset(); // Limpa os campos
+      }, 5000);
+
+      document.getElementById("form-contato").reset();
     });
   </script>
-  
 
 </body>
 </html>
